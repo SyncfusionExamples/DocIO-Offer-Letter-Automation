@@ -1,0 +1,241 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+
+<style>
+    body {
+        background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 100%);
+        min-height: 100vh;
+    }
+
+    .privacy-container {
+        max-width: 900px;
+        margin: 50px auto;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        padding: 50px;
+    }
+
+    .privacy-header {
+        text-align: center;
+        margin-bottom: 40px;
+        padding-bottom: 25px;
+        border-bottom: 3px solid #0ea5e9;
+    }
+
+        .privacy-header h1 {
+            color: #0f172a;
+            font-size: 38px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .privacy-header p {
+            color: #64748b;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+    .privacy-section {
+        margin-bottom: 35px;
+    }
+
+        .privacy-section h2 {
+            color: #0ea5e9;
+            font-size: 26px;
+            font-weight: 600;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .privacy-section h3 {
+            color: #334155;
+            font-size: 20px;
+            font-weight: 600;
+            margin-top: 20px;
+            margin-bottom: 12px;
+        }
+
+        .privacy-section p {
+            color: #475569;
+            line-height: 1.9;
+            margin-bottom: 16px;
+            text-align: justify;
+            font-size: 15px;
+        }
+
+        .privacy-section ul {
+            margin-left: 30px;
+            margin-bottom: 16px;
+        }
+
+        .privacy-section li {
+            color: #475569;
+            line-height: 1.9;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+    .highlight-box {
+        background: #f0f9ff;
+        border-left: 5px solid #0ea5e9;
+        padding: 25px;
+        margin: 30px 0;
+        border-radius: 8px;
+    }
+
+        .highlight-box h3 {
+            color: #0369a1;
+            margin-bottom: 12px;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .highlight-box p {
+            color: #0369a1;
+            margin: 0;
+            font-weight: 500;
+            line-height: 1.8;
+        }
+
+        .highlight-box ul {
+            margin-top: 12px;
+            margin-bottom: 0;
+        }
+
+        .highlight-box li {
+            color: #0369a1;
+        }
+
+    .icon {
+        font-size: 26px;
+    }
+
+    .contact-section {
+        background: #f8fafc;
+        border: 2px solid #e2e8f0;
+        border-radius: 12px;
+        padding: 30px;
+        margin-top: 40px;
+        text-align: center;
+    }
+
+        .contact-section h3 {
+            color: #0f172a;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .contact-section p {
+            color: #64748b;
+            margin-bottom: 20px;
+        }
+
+        .contact-section a {
+            display: inline-block;
+            background: #0ea5e9;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+            .contact-section a:hover {
+                background: #0284c7;
+            }
+</style>
+
+<div class="privacy-container">
+    <div class="privacy-header">
+        <h1><span>📄</span> Privacy Policy</h1>
+        <p>Last Updated: May 25, 2026</p>
+    </div>
+
+    <div class="privacy-section">
+        <h2><span class="icon">📋</span> Introduction</h2>
+        <p>
+            Welcome to Offer Letter Generator. We understand the importance of protecting your confidential candidate information
+            when creating offer letters. This Privacy Policy explains how our application handles document templates and candidate data
+            during the offer letter generation process.
+        </p>
+        <p>
+            Our application is designed as a document processing tool that helps HR teams generate professional, personalized offer letters
+            by merging Word document templates with candidate information from Excel data files.
+        </p>
+    </div>
+
+    <div class="privacy-section">
+        <h2><span class="icon">🔒</span> Information We Process</h2>
+        <p>When you use our offer letter generation service, we temporarily process the following information:</p>
+
+        <h3>Document Templates</h3>
+        <ul>
+            <li>Word document templates (.docx, .doc, .dotx, .dot) containing offer letter formats</li>
+            <li>Templates with merge fields such as «CandidateName», «PositionTitle», «Salary», and other candidate-specific placeholders</li>
+        </ul>
+
+        <h3>Candidate Data Files</h3>
+        <ul>
+            <li>Excel files (.xlsx, .xls, .csv) containing candidate records</li>
+            <li>Structured data including candidate names, positions, compensation, dates, and other employment details</li>
+            <li>Multiple candidate records for batch processing</li>
+        </ul>
+
+        <h3>Generated Offer Letters</h3>
+        <ul>
+            <li>Merged Word documents or PDF files containing candidate-specific offer letters</li>
+            <li>Single consolidated document or multiple individual letters (ZIP format)</li>
+            <li>Optional digital signature images embedded in generated documents</li>
+        </ul>
+    </div>
+
+    <div class="privacy-section">
+        <h2><span class="icon">⚙️</span> How We Process Your Data</h2>
+        <p>
+            Our application uses Syncfusion DocIO library to perform mail merge operations and document conversion.
+            The processing workflow is as follows:
+        </p>
+
+        <h3>Document Processing Steps:</h3>
+        <ul>
+            <li><strong>Upload:</strong> Your Word template and Excel candidate data file are uploaded to the server's temporary memory</li>
+            <li><strong>Mail Merge:</strong> Syncfusion DocIO performs mail merge operations to populate template fields with candidate data</li>
+            <li><strong>Selection Processing:</strong> Process all candidates or generate a single offer letter by offer code</li>
+            <li><strong>Format Detection:</strong> The system automatically detects the appropriate merge format based on your data structure</li>
+            <li><strong>Signature Integration:</strong> If enabled, digital signature images are embedded at specified keyword locations</li>
+            <li><strong>Format Conversion:</strong> The merged document is converted to your selected output format (DOCX or PDF)</li>
+            <li><strong>Output Generation:</strong> Based on your selection, either a single document or batch ZIP file is created</li>
+            <li><strong>Download:</strong> The generated file(s) are immediately sent to your browser for download</li>
+        </ul>
+    </div>
+
+    <div class="highlight-box">
+        <h3><span>⚠️</span> Important Note</h3>
+        <p>
+            All processing happens locally in your browser, and files <strong>never</strong>
+            go to any external server. Everything stays private and secure on your machine. ✔️
+        </p>
+    </div>
+
+    <div class="contact-section">
+        <h3>📧 Questions or Concerns?</h3>
+        <p>
+            If you have any questions about this Privacy Policy or how we handle legal document processing with database integration,
+            please contact support for technical assistance:
+        </p>
+        <a href="https://support.syncfusion.com/support/tickets/create" target="_blank">
+            Contact Support
+        </a>
+    </div>
+</div>
