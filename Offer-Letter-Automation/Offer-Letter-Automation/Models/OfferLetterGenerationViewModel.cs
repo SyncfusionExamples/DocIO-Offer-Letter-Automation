@@ -71,7 +71,7 @@ namespace Offer_Letter_Automation.Models
         /// Default: "Sign, WITNESS, AuthorizedSign"
         /// </summary>
         [Display(Name = "Signature Keywords")]
-        public string SignatureKeywords { get; set; } = "Signature, CandidateSign";
+        public string SignatureKeywords { get; set; } = "Signatory, CandidateSign";
 
 
 
