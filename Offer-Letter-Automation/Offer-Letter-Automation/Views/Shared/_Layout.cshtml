@@ -36,11 +36,92 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2026 - Offer_Letter_Automation - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer class="app-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h5>Offer Letter Generator</h5>
+            </div>
+
+            <div class="footer-links">
+                <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                <span class="separator">•</span>
+                <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy Policy</a>
+                <span class="separator">•</span>
+                <a href="https://help.syncfusion.com/document-processing/word/word-library/net/getting-started" target="_blank">DocIO Documentation</a>
+            </div>
         </div>
     </footer>
+
+    <style>
+        .app-footer {
+            background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 100%);
+            color: white;
+            margin-top: 60px;
+            padding: 40px 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .footer-section h5 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: white;
+        }
+
+        .footer-links {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 14px;
+        }
+
+            .footer-links a {
+                color: white;
+                text-decoration: none;
+                font-weight: 500;
+                transition: all 0.3s ease;
+                opacity: 0.95;
+            }
+
+                .footer-links a:hover {
+                    opacity: 1;
+                    text-decoration: underline;
+                }
+
+            .footer-links .separator {
+                opacity: 0.6;
+            }
+
+        @@media (max-width: 768px) {
+            .footer-content
+
+        {
+            flex-direction: column;
+            text-align: center;
+            gap: 20px;
+        }
+
+        .footer-links {
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .app-footer {
+            padding: 30px 20px;
+            margin-top: 40px;
+        }
+
+        }
+    </style>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
